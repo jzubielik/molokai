@@ -241,7 +241,9 @@ if &t_Co > 255
    hi SpecialKey      ctermfg=59
 
    if exists("g:rehash256") && g:rehash256 == 1
-       hi Normal       ctermfg=252 ctermbg=234
+       if s:molokai_transparent == 0
+          hi Normal       ctermfg=252 ctermbg=234
+       endif
        hi CursorLine               ctermbg=236   cterm=none
        hi CursorLineNr ctermfg=208               cterm=none
 
